@@ -1,10 +1,6 @@
-package main
+package container_with_most_water
 
-func main() {
-	maxArea([]int{2, 3, 10, 5, 7, 8, 9})
-}
-
-func maxArea(height []int) int {
+func MaxArea(height []int) int {
 	maxContainer := 0
 	for i, iH := range height {
 		for j, jH := range height {

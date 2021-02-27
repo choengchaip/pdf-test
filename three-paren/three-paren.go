@@ -1,15 +1,4 @@
-package main
-
-import (
-	"log"
-)
-
-func main() {
-	problems := []string{"(())", "(()))(()", "(()())()", "({])[]", "[({}])", "()[{}()]"}
-	for _, problem := range problems {
-		log.Println(solve(problem))
-	}
-}
+package three_paren
 
 var (
 	charMatches = map[string]string{
@@ -19,7 +8,7 @@ var (
 	}
 )
 
-func solve(problem string) bool {
+func IsPerfectParen(problem string) bool {
 	stack := make([]string, 0)
 	for i := range problem {
 		symbol := string(problem[i])
